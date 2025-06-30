@@ -1,0 +1,20 @@
+[project]
+name = "ai-webplatform"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "evalml>=0.84.0",
+    "fastapi>=0.115.14",
+    "flask>=3.1.1",
+    "gunicorn>=23.0.0",
+    "joblib>=1.5.1",
+    "pandas>=2.0.3",
+    "pydantic>=2.11.7",
+    "pytest>=8.4.1",
+    "python-dotenv>=1.1.1",
+    "python-multipart>=0.0.20",
+    "scikit-learn>=1.4.2",
+    "uvicorn>=0.35.0",
+]

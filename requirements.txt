@@ -1,0 +1,9 @@
+Flask
+gunicorn
+pandas
+evalml
+# atlantica
+pydantic
+python-dotenv
+pytest
+git+https://github.com/Atharvaud29/atlantica.git@main#egg=atlantica
