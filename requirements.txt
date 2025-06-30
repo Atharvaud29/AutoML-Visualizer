@@ -6,4 +6,5 @@ evalml
 pydantic
 python-dotenv
 pytest
-git+https://github.com/Atharvaud29/atlantica.git@main#egg=atlantica
+git+https://github.com/Atharvaud29/AutoML-Visualizer.git@main#egg=atlantica
+
