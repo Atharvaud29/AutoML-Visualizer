@@ -1,0 +1,49 @@
+<!-- app/templates/preprocessing_steps.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preprocessing Step</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+    <h2 class="mb-4">Preprocessing: {{ explanation.step }}</h2>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            Step Summary
+        </div>
+        <div class="card-body">
+            <p><strong>Description:</strong> {{ explanation.summary }}</p>
+            <p><strong>Why it matters:</strong> {{ explanation.reason }}</p>
+
+            {% if explanation.details %}
+            <div>
+                <strong>Details:</strong>
+                <ul>
+                    {% for col, val in explanation.details.items() %}
+                    <li><code>{{ col }}</code>: {{ val }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <h4>Data Preview (First 5 Rows)</h4>
+    <div class="table-responsive">
+        {{ preview | safe }}
+    </div>
+
+    <div class="mt-4">
+        <a href="/preprocessing" class="btn btn-secondary">Upload Another File</a>
+        <!-- Future: Add Next Step button here -->
+         {% if next_step %}
+    <a href="/preprocessing/step/{{ next_step }}" class="btn btn-primary ms-2">Next Step →</a>
+{% else %}
+    <div class="alert alert-success mt-3">Preprocessing complete. Ready for model training!</div>
+{% endif %}
+
+    </div>
+</body>
+</html>
